@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <item android:id="@+id/item1"
+       android:title="About Us"
+       app:showAsAction="never"
+       android:icon="@drawable/ic_menu"/>
+
+    <item android:id="@+id/item2"
+        android:title="Help"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/item3"
+        android:title="Settings"
+        app:showAsAction="never">
+
+       <menu>
+            <item android:id="@+id/sub1"
+                android:title="General"
+                app:showAsAction="never"/>
+
+           <item android:id="@+id/sub2"
+               android:title="Permissions"/>
+
+       </menu>
+
+     </item>
+
+
+</menu>
