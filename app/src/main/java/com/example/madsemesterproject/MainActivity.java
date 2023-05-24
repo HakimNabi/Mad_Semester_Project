@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -38,21 +39,14 @@ public class MainActivity extends AppCompatActivity {
     UsersRecyclerAdapter adapter;
 
     Button buttonAdd;
-
-    //Adding Menu Method.
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.other_menu, menu);
-        return true;
+    public void gotomap(View v){
+        startActivity(new Intent(MainActivity.this,MapsActivity.class));
     }
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         FirebaseDatabase.getInstance().setPersistenceEnabled(true); // work offline
         Objects.requireNonNull(getSupportActionBar()).hide();
@@ -72,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 ViewDialogAdd viewDialogAdd = new ViewDialogAdd();
                 viewDialogAdd.showDialog(MainActivity.this);
             }
+
         });
 
         readData();

@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:title="Mad Project"
-        android:textAlignment="center"
         android:titleTextColor="@color/black">
+
 
 
     </Toolbar>
@@ -30,6 +30,15 @@
         android:layout_height="50dp"
         android:background="@android:color/holo_green_dark"
         android:text="ADD NEW USER"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+<androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="gotomap"
+        android:background="@android:color/black"
+        android:text="Map"
         android:textColor="@android:color/white"
         android:textStyle="bold"/>
 
